@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Bistro</title>
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase secondary" href="#">El Bistro</a>
+        <button class="navbar-toggler p-1 text-uppercase" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav text-uppercase ml-auto py-4 py-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li onclick="displayCartItems()" class="cartt nav-item"><i class="fa fa-shopping-cart"></i></li>
+          </ul>
+      </div>
+</nav>
+<!-- Hero Section-->
+<header class="p-5 text-center d-flex justify-content-center align-items-center row">
+    <div class="col-lg-6 col-12">
+        <div class="h1 mb-4 primary text-uppercase">Welcome To El Bistro</div>
+        <div class="h5 mb-4 defaultc">Pagkaing pang-single, magjowa, magbabarkada, magkapamilya, at magkaaway! Dito lamang sa Balelleng, Santo Tomas, Isabela. </div>
+        <a class="btn btn-xl text-uppercase" href="#menu">Order Now</a>
+    </div>
+    <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+      <img src="images/bgg.png" alt="">
+    </div>
+</header>
+<!-- ======= About Section ======= -->
+<section id="about" class="about py-5 defaultc">
+    <div class="container">
+      <div class="text-center pb-3">
+        <h2>About Us</h2>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-7 position-relative about-img" style="background-image: url(images/bg.jpg) ;">
+          <div class="call-us position-absolute">
+            <h4 class="secondary">Book a Table</h4>
+            <p class="primary h3">+639261255387</p>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex align-items-end">
+          <div class="content ps-0 ps-lg-5">
+            <p>
+              Welcome to El Bistro, where culinary excellence meets unparalleled ambiance. Our passion for exceptional dining experiences drives us to create a haven for food enthusiasts, where every bite tells a story and every moment is cherished.
+            </p>
+            <p>
+              Founded in 2021, El Bistro has quickly become a culinary destination known for its unique blend of flavors and exceptional dining experiences. What began as a humble vision by Joel has blossomed into a haven for food enthusiasts seeking memorable moments.
+            </p>
+            <div class="position-relative mt-4 about-link">
+              <div class="about-hover">
+                <div class="about-hover-content"><a href="https://fb.watch/mhEbiWwCv9/" class="glightbox play-btn"><i class="fas fa-play fa-3x"></i></a></div>
+            </div>
+              <img src="images/ss.png" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu py-5">
+    <div class="container">
+      <div class="text-center pb-3">
+        <h2 class="defaultc mb-3">Our Menu</h2>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/chicken.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Chicken</p>
+                <p class="h5">P120.00</p>
+                <button class="btn" onclick="addToCart('Chicken', 'images/menu/chicken.jpg', '120.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/lechon.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Lechon Manok</p>
+                <p class="h5">P300.00</p>
+                <button class="btn" onclick="addToCart('Lechon Manok', 'images/menu/lechon.jpg', '300.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/bbq.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">barbeque</p>
+                <p class="h5">P150.00</p>
+                <button class="btn" onclick="addToCart('Barbeque', 'images/menu/bbq.jpg', '150.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/tilapia.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Tilapia</p>
+                <p class="h5">P250.00</p>
+                <button class="btn" onclick="addToCart('Tilapia', 'images/menu/tilapia.jpg', '250.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/shanghai.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Shanghai</p>
+                <p class="h5">P170.00</p>
+                <button class="btn" onclick="addToCart('Shanghai', 'images/menu/shanghai.jpg', '170.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/sisig.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Sisig</p>
+                <p class="h5">P80.00</p>
+                <button class="btn" onclick="addToCart('Sisig', 'images/menu/sisig.jpg', '80.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/pansit.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Pancit Cabagan</p>
+                <p class="h5">P320.00</p>
+                <button class="btn" onclick="addToCart('Pancit Cabagan', 'images/menu/pansit.jpg', '320.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card" >
+              <img src="images/menu/spag.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="text-uppercase h3 primary">Spaghetti</p>
+                <p class="h5">P280.00</p>
+                <button class="btn" onclick="addToCart('Spaghetti', 'images/menu/spag.jpg', '280.00')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Side Cart -->
+<div class="side-cart">
+  <button class="close-btn" onclick="hideCart()">X</button>
+  <h3 class="secondary mb-3">Your Cart</h3>
+  <div class="cart-items">
+  </div>
+  <button class="btn checkout" onClick="window.location.reload();">Checkout</button>
+</div>
+<!-- Contact-->
+<section class="page-section" id="contact">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="text-uppercase text-light p-5">Contact Us</h2>
+      </div>
+      <div class="row gy-4 mb-5">
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon fa fa-map" aria-hidden="true"></i>
+              <div>
+                <h3>Our Address</h3>
+                <p>Balelleng , Santo Tomas, Philippines, 3327</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon fa fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>el.bistro@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon fa fa-phone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+639261255387</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon fa fa-share" aria-hidden="true"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <div><strong>Mon-Sat:</strong> 10AM - 9PM;
+                  <strong>Sunday:</strong> Closed
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <form id="contactForm">
+          <div class="row align-items-stretch mb-5">
+              <div class="col-md-6">
+                  <div class="form-group mb-3">
+                      <input class="form-control p-3" id="name" type="text" placeholder="Your Name *" required/>
+                  </div>
+                  <div class="form-group mb-3">
+                      <input class="form-control p-3" id="email" type="email" placeholder="Your Email *" required/>
+                  </div>
+                  <div class="form-group mb-md-0 mb-3">
+                      <input class="form-control p-3" id="phone" type="tel" placeholder="Your Phone *" required />
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group form-group-textarea mb-md-0 h-100">
+                      <textarea class="form-control h-100 p-3" id="message" placeholder="Your Message *" required></textarea>
+                  </div>
+              </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-xl text-uppercase p-3 mb-5" id="submitButton" type="submit">Send Message</button></div>
+      </form>
+  </div>
+</section>
+<!-- Footer-->
+<footer class="p-3 text-center">
+  <p>&copy; 2023 El Bistro. All rights reserved.</p>
+</footer>
+<script src="javascript.js"></script>
+</body>
+</html>

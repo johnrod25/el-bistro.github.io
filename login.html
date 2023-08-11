@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="d-flex align-items-center justify-content-center fullwidth">
+    <div class="form-container m-3 p-3 border text-center">
+      <h2 class="m-3 h3 primary">Welcome To El Bistro</h2>
+      <form id="loginForm" onsubmit="return validateLogin()">
+        <input type="text" name="username" id="loginUsername" placeholder="Username" required>
+        <input type="password" name="password" id="loginPassword" placeholder="Password" required>
+        <p id="log-status" class="text-center primary"></p>
+        <button type="submit" class="btn">Login</button>
+        <p><a href="signup.html">Create Account</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="javascript.js"></script>
+</body>
+</html>
